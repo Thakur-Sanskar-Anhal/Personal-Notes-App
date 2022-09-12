@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import io.realm.Realm;
 
@@ -20,7 +21,8 @@ public class AddNote extends AppCompatActivity {
         Button savebtn = findViewById(R.id.savebtn);
 
         Realm.init(getApplicationContext());
-        Realm realm = Realm.getDefaultInstance()
+        Realm realm = Realm.getDefaultInstance();
+
 
         savebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +30,15 @@ public class AddNote extends AppCompatActivity {
                 String title = titleInput.getText().toString();
                 String description = descriptionInput.getText().toString();
                 long createdTime = System.currentTimeMillis();
+
+                realm.beginTransaction();
+                Note note = realm.createObject(Note.class);
+                note.setTitle(title);
+                note.setDescription(description);
+                note.setCreated_time(createdTime);
+                realm.commitTransaction();
+                Toast.makeText(getApplicationContext(),"Note Saved",Toast.LENGTH_SHORT).show();
+                finish();
 
             }
         });
