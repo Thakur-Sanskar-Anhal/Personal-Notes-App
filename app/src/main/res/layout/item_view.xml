@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     android:layout_marginBottom="10dp"
+    android:background="@drawable/roundstylenotes"
+    android:backgroundTint="#ffffff"
     xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:id="@+id/titleOutput"
         android:textSize="20dp"
         android:textColor="@color/black"
@@ -19,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/descriptionOutput"
+        android:layout_marginLeft="10dp"
         android:layout_below="@id/titleOutput"
         android:textColor="#656565"
         tools:text="My long long long long description"
@@ -33,6 +39,7 @@
         android:textColor="#858585"
         tools:text="12 Sep 2022"
         android:gravity="end"
+        android:layout_marginRight="10dp"
         />
     
 </RelativeLayout>
