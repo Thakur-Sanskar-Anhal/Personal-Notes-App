@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#004A36"
-    tools:context=".AddNote">
+    android:background="@drawable/gradient_list"
+    tools:context=".AddNote"
+    android:id="@+id/linearLayout">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add New Note"
         android:id="@+id/titletext"
-        android:textColor="@color/white"
         android:textSize="50dp"
         android:layout_gravity="center"
         android:layout_margin="20dp"
@@ -42,7 +42,7 @@
             android:padding="15dp"
             android:textSize="30dp"
             android:layout_margin="10dp"
-            android:textColorHint="@color/white"
+
             />
 
         <EditText
@@ -52,14 +52,12 @@
             android:id="@+id/description"
             android:hint="Description"
             android:textSize="20dp"
-            android:textColor="@color/white"
             android:textStyle="bold"
             android:layout_margin="10dp"
             android:backgroundTint="#80ffffff"
             android:padding="15dp"
             android:lines="9"
             android:gravity="top"
-            android:textColorHint="@color/white"
             />
     </LinearLayout>
     
