@@ -10,23 +10,24 @@
     tools:context=".MainActivity">
 
   <TextView
+      android:id="@+id/notesTitle"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:id="@+id/notesTitle"
+      android:layout_centerHorizontal="true"
+      android:padding="20dp"
       android:text="NOTES"
       android:textColor="@color/white"
       android:textSize="40dp"
-      android:layout_centerHorizontal="true"
-      android:padding="20dp"
-      android:textStyle="bold"
-    />
+      android:textStyle="bold" />
 
   <androidx.recyclerview.widget.RecyclerView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
       android:id="@+id/recyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="530dp"
+      android:layout_above="@+id/newNotebtn"
       android:layout_below="@id/notesTitle"
-    />
+      android:layout_marginTop="14dp"
+      android:layout_marginBottom="10dp" />
 
   <androidx.appcompat.widget.AppCompatButton
       android:layout_width="wrap_content"
