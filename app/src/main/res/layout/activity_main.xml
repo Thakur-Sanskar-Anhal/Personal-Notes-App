@@ -38,6 +38,7 @@
       android:textSize="17dp"
       android:layout_margin="20dp"
       android:textStyle="bold"
+      android:textColor="@color/black"
       android:background="@drawable/roundstyle"
       android:backgroundTint="@color/white"
       />
